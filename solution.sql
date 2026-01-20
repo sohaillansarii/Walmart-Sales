@@ -103,7 +103,7 @@ from walmart
 group by 1,2
 order by 1,3 desc
 
--- #9 Identify 5 branch with highest decrese ratio in 
+-- #Q9 Identify 5 branch with highest decrese ratio in 
 -- revevenue compare to last year(current year 2023 and last year 2022)
 
 with revenue_2022
@@ -141,4 +141,19 @@ on cs.branch = ls.branch
 where 
      ls.revenue > cs.revenue 
 order by  4 desc
+
 limit 5;
+
+--Q10Find the total sales, total quantity sold, and average rating for each category in each city.
+-- Only include categories where total sales exceed 10,000.
+
+select 
+       city,
+	   category,
+       sum(total) as total_sales,
+	   sum(quantity) as quantity_sold,
+	   avg(rating) as avg_rating
+from  walmart
+group by 1,2
+having sum(total) > 10000
+order by 1,2;
