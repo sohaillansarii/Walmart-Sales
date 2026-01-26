@@ -157,3 +157,15 @@ from  walmart
 group by 1,2
 having sum(total) > 10000
 order by 1,2;
+
+
+
+
+CREATE OR REPLACE FUNCTION github_pgsql_check()
+RETURNS void AS $$
+BEGIN
+  RAISE NOTICE 'PLpgSQL detected';
+END;
+$$ LANGUAGE plpgsql;
+
+
