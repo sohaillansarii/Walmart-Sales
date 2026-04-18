@@ -290,5 +290,5 @@ ORDER BY city, category;
 - Health and Beauty / Electronics categories contributed heavily to overall revenue across multiple cities.
 - Customer purchasing behavior varied by city, with distinct differences in preferred categories and payment methods.
 
-## Author- SOHAIL ANSARI
+## Author - SOHAIL ANSARI
 
