@@ -103,7 +103,7 @@ from walmart
 group by 1,2
 order by 1,3 desc
 
--- #Q9 Identify 5 branch with highest decrese ratio in 
+-- #9 Identify 5 branch with highest decrese ratio in 
 -- revevenue compare to last year(current year 2023 and last year 2022)
 
 with revenue_2022
@@ -141,7 +141,6 @@ on cs.branch = ls.branch
 where 
      ls.revenue > cs.revenue 
 order by  4 desc
-
 limit 5;
 
 --Q10Find the total sales, total quantity sold, and average rating for each category in each city.
@@ -157,15 +156,4 @@ from  walmart
 group by 1,2
 having sum(total) > 10000
 order by 1,2;
-
-
-
-
-CREATE OR REPLACE FUNCTION github_pgsql_check()
-RETURNS void AS $$
-BEGIN
-  RAISE NOTICE 'PLpgSQL detected';
-END;
-$$ LANGUAGE plpgsql;
-
 
