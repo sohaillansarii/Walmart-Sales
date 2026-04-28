@@ -157,3 +157,11 @@ group by 1,2
 having sum(total) > 10000
 order by 1,2;
 
+
+-- Enable PLpgSQL detection on GitHub
+CREATE OR REPLACE FUNCTION demo_plpgsql()
+RETURNS VOID AS $$
+BEGIN
+    RAISE NOTICE 'PLpgSQL enabled';
+END;
+$$ LANGUAGE plpgsql;
